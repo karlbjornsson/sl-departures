@@ -16,7 +16,7 @@ Du kan välja både **hållplats** och **färdmedel** (Buss, Tunnelbana, Båt, S
 ## Skräddarsy din egen app
 1. Kör skriptet **SL_hållplatsID.py** för att söka efter hållplatsnamn och få fram dess **site_id**.
 2. Kopiera de site_id du vill använda.
-3. Öppna huvudprogrammet **sl.py** och ersätt värdet på `site_id` på **rad 14** och på rad **100**
+3. Öppna huvudprogrammet **sl.py** och ersätt värdet på `site_id` på **rad 14** och på **rad 100**
 <img width="928" height="499" alt="image" src="https://github.com/user-attachments/assets/bccddd83-c472-4812-8e5a-affb242c0f1f" />
 <img width="716" height="347" alt="image" src="https://github.com/user-attachments/assets/0ca2772a-de62-4ed1-98c0-f048a0bc07a3" />
 
