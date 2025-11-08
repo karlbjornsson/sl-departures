@@ -1,5 +1,6 @@
 #Detta skript skapar en Tray ikon Program för att se avgångar för SL-trafiken i realtid.
 
+import os
 import requests
 import pandas as pd
 import tkinter as tk
@@ -8,7 +9,6 @@ from tkinter import *
 import pystray
 from pystray import MenuItem as item
 from PIL import Image
-import threading
 
 #Lägg in din avgång här: t.ex site_id = 9001 (T-centralen)
 site_id = 1327
@@ -210,7 +210,11 @@ def on_clicked(icon, item):
 
 #Image   
 def icon_menu():
-    image = Image.open(r"C:\Users\bjorn\Documents\Python\API\SL\sl_icon.png")
+    #lägg in sökväg för image
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    icon_path = os.path.join(script_dir, "sl_icon.png")
+    
+    image = Image.open(icon_path)
     menu = pystray.Menu(
         pystray.MenuItem("Visa avgångar", on_clicked),
         pystray.MenuItem("Avsluta", on_clicked)
