@@ -1,9 +1,11 @@
 # sl-departures
 Real­tids­avgångar från SL med systemtray och GUI
+<img width="557" height="500" alt="2" src="https://github.com/user-attachments/assets/0728be9b-9d91-4995-96ec-32fe3dfd61ee" />
+
 
 ## Gui
 Visar realtidsavgångar från SL direkt i ett litet GUI-fönster och system tray.  
-Du kan välja både **hållplats** och **färdmedel** (Buss, Tunnelbana, Båt, Spårväg city), och avgångarna uppdateras automatiskt.
+Du kan välja både **hållplats** och **färdmedel** (Buss, Tunnelbana, Båt, Pendeltåg och Övrig spårtrafik såsom Tvärbanan, Spårväg city mm), och avgångarna uppdateras automatiskt.
 
 ## Funktioner
 - System tray-icon (programmet kan köras i bakgrunden)
