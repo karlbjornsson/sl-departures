@@ -1,5 +1,6 @@
-# sl-departures
-Real­tids­avgångar från SL med systemtray och GUI
+# SL-departures
+## Real­tids­avgångar från SL med systemtray och GUI
+
 <img width="557" height="500" alt="2" src="https://github.com/user-attachments/assets/0728be9b-9d91-4995-96ec-32fe3dfd61ee" />
 
 
