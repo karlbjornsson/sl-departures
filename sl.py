@@ -45,7 +45,7 @@ def sl_api():
     #Gör om tid till endast HH:MM
     df["Tid"] = pd.to_datetime(df["Tid"]).dt.strftime("%H:%M")
     
-    #Ändra tunnelbanenummer till färger
+    #Ändra tunnelbanenummer
     df["Linje"] = df["Linje"].astype(str).replace(linjer)
     #Ändra namn på färdmedel
     df["Färdmedel"] = df["Färdmedel"].astype(str).replace(färdmedel)
