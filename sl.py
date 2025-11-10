@@ -1,3 +1,4 @@
+
 #Detta skript skapar en Tray ikon Program för att se avgångar för SL-trafiken i realtid.
 
 import os
@@ -45,7 +46,7 @@ def sl_api():
     df["Tid"] = pd.to_datetime(df["Tid"]).dt.strftime("%H:%M")
     
     #Ändra tunnelbanenummer till färger
-    df["Linje"] = df["Linje"].astype(str).replace(linjefärger)
+    df["Linje"] = df["Linje"].astype(str).replace(linjer)
     #Ändra namn på färdmedel
     df["Färdmedel"] = df["Färdmedel"].astype(str).replace(färdmedel)
 
@@ -53,20 +54,33 @@ def sl_api():
 # ---------------------------------------
 #Ändra namn
 
-linjefärger = {
+linjer = {
     "10": "Blåa",
     "11": "Blåa",
     "13": "Röda",
     "14": "Röda",
     "17": "Gröna",
     "18": "Gröna",
-    "19": "Gröna",}
+    "19": "Gröna",
+    "7": "Spårväg City",
+    "12": "Nockebybanan",
+    "21": "Lidingöbanan",
+    "25": "Saltsjöbanan",
+    "26": "Saltsjöbanan",
+    "27": "Roslagsbanan",
+    "28": "Roslagsbanan",
+    "29": "Roslagsbanan",
+    "30": "Tvärbanan",
+    "31": "Tvärbanan"
+}
 
 färdmedel = {
     "BUS": "Buss", 
     "METRO": "Tunnelbana",
     "SHIP": "Båt",
-    "TRAM": "Spårväg city"}
+    "TRAM": "Övrig spårtrafik",
+    "TRAIN": "Pendeltåg"
+}
 
 #----------------------------------------
 
@@ -101,8 +115,10 @@ stationer = {
     "Nytorgsgatan": 1327,
     "Frihamnsporten": 1171,
     "Slussen": 9192,
-    "T-centralen": 9001,
-    "Hötorget": 9119
+    "Gärdet": 9221,
+    "Hötorget": 9119,
+    "Karolinska institutet västra": 3404,
+    "Ropsten": 9220
 }
 
 # Ändra hållplats-ID, site_id
@@ -129,14 +145,13 @@ dropdown_menu.bind("<<ComboboxSelected>>", byt_hållplats)
 #Skapa ett standardval
 valt_färdmedel = "Buss"
 
-alternativ_färdmedel = ["Buss", "Tunnelbana", "Båt", "Spårväg city"]
+alternativ_färdmedel = ["Buss", "Tunnelbana", "Båt", "Övrig spårtrafik", "Pendeltåg"]
 
 # Funktion = Ändra Färdmedel
 def byt_färdmedel(event):
     global valt_färdmedel
     valt_färdmedel = dropdown_menu_2.get()
     update_table()
-
 
 #Skapa Combobox för Färdmedel
 l2=Label(window, text="Färdmedel")
