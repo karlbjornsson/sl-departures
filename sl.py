@@ -1,5 +1,10 @@
 
-#Detta skript skapar en Tray ikon Program för att se avgångar för SL-trafiken i realtid.
+# Detta skript skapar en system tray-ikon och startar ett program som hämtar och visar
+# realtidsinformation om avgångar i SL-trafiken.
+
+# Ikon:
+# "SL icons" created by NajmunNahar – Flaticon
+# https://www.flaticon.com/free-icons/sl
 
 import os
 import requests
@@ -118,7 +123,8 @@ stationer = {
     "Gärdet": 9221,
     "Hötorget": 9119,
     "Karolinska institutet västra": 3404,
-    "Ropsten": 9220
+    "Ropsten": 9220,
+    "Rökubbsgatan": 1140
 }
 
 # Ändra hållplats-ID, site_id

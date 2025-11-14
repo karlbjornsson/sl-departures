@@ -7,7 +7,7 @@ response = requests.get("https://transport.integration.sl.se/v1/sites?expand=tru
 
 data = response.json()
 
-hallplats = "Ropsten"
+hallplats = "Rökubbsgatan"
 
 for i in data:
     if hallplats.lower() in i["name"].lower():
